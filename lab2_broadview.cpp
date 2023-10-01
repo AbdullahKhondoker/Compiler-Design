@@ -5,23 +5,27 @@ using namespace std;
 void print(const string& myText)
 
 {
-   // cout << "Arithmetic operators: ";
-    for (char c : myText) {
-        if (c == '+' || c == '-' || c == '*' || c == '/') {
-            cout <<"operators: "<< c << " ";
-        }
-        /*else if (c >= 'A' && c<= 'Z')
+
+    for (char c : myText)
         {
-            cout<<"Variables :"<<c<<" "<<endl;
-        }*/
+        if (c == '+' || c == '-' || c == '*' || c == '/' || c == '&&') {
+            cout <<"operators: "<< c << ",";
+        }
+
         else if (c >= 'a' && c<= 'z')
         {
-            cout<<"Variables :"<<c<<" ";
+            cout<<"Variables :"<<c<<",";
         }
-        /*else
+        else if (c>='0' && c<='2147483647')
         {
-            cout<<"Invalid Operator Existing "<<endl;
-        }*/
+            cout<<endl;
+            cout<<"Constant: "<< c;
+        }
+      else
+      {
+          cout<<"Invalid identifier"<<endl;
+      }
+
     }
     cout << endl;
 }
